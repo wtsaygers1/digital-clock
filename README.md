@@ -63,7 +63,7 @@ Functions:
     - var: date, hour, min, sec
    
     
-- AM/PM
+- AM/PM (highnoon)
     - If: hour is >= 12
         - Then: PM
     - Else: 

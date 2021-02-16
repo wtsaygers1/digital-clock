@@ -1,5 +1,6 @@
 /* let clock = document.getElementById('clock'); */
 
+
 setInterval(currentTime, 1000);
 
 function currentTime() {
@@ -22,6 +23,14 @@ function currentTime() {
     min = min < 10 ? '0' + min : min;
     sec = sec < 10 ? '0' + sec : sec;
 
+    let timeFormat = hour + ' : ' + min + ' : ' + sec + ' ' + am_pm;
+   
+    document.getElementById('clock').innerHTML = timeFormat; 
+
+}
+
+currentTime();
+
     /*
     if (hour = 0) {
         return 12;
@@ -30,9 +39,10 @@ function currentTime() {
     } else {
         return hour;
     }
-    */
+    *//*
     
     let timeFormat = hour + ' : ' + min + ' : ' + sec + ' ' + am_pm;
+   
     document.getElementById('clock').innerHTML = timeFormat;  
     
     /*
@@ -59,6 +69,3 @@ function currentTime() {
         }
     }    
     */
-}
-
-currentTime();

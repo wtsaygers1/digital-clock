@@ -69,3 +69,11 @@ currentTime();
         }
     }    
     */
+
+let schedule = new Date();
+    let day = schedule.getDate();
+    let month = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'];
+    let year = schedule.getFullYear();
+
+document.getElementById('date').innerHTML = month[schedule.getMonth()] + ' ' + day + ', ' + year;

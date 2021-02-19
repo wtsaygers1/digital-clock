@@ -14,20 +14,11 @@ function currentTime() {
     am_pm = 'AM';
 
 /* these if statements determine if it is AM or PM
-the first is saying if the hour is greater than 12, then
-subtract 12 from the hour and put PM at the end
-the second is saying if the hour is 0, then replace the 0
-with 12 and put an AM at the end
-any hour between 1 and 11 inclusive will just show that hour
-and have an AM at the end because that is the default */    
-    if (hour > 12) {
-        hour -= 12;
-        am_pm = 'PM';
-    } 
-    if (hour == 0) {
-        hr = 12;
-        am_pm = 'AM';
-    }
+the first is saying if the hour is greater than or equal to 12,
+then the time will finish with PM
+Otherwise the time will finish with AM */    
+    am_pm = (hour >= 12) ? 'PM' : 'AM';
+
 /* the code below adds a zero to any number in the hour,
 minutes, and seconds that is less than 10
 this is required because if a unit of time is less than ten
